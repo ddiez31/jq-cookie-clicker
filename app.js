@@ -3,8 +3,7 @@ $(document).ready(function() {
 
     var counter = 0;
     var counterInfini = 0;
-    var message = ["allez c'est bon!", "c'est bientôt fini?", "t'en n'a pas marre??", "retournes bosser!!"];
-
+    var message = ["allez c'est bon!", "c'est bientôt fini?", "t'en n'a pas marre??", "retournes bosser!!", "çà suffit maintenant!"];
 
     $("img").click(function() {
         counterInfini++;
@@ -13,11 +12,9 @@ $(document).ready(function() {
         if (counterInfini == 20) {
             alert("N'as-tu rien d'autre à faire ??");
             counter = 0;
-            console.log(counter);
-        } else(counterInfini == counterInfini + 20) {
-            alert("pfff");
-
+        } else if (counter == 20) {
+            counter = 0;
+            alert(message[Math.floor(Math.random() * 5)]);
         }
     });
-
 });
